@@ -4,15 +4,26 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 
 const { PORT, HTTP_STATUS_CODES, MONGO_URL, TEST_MONGO_URL } = require('./config');
+const { authRouter } = require('./auth/auth.router');
+const { userRouter } = require('./user/user.router');
+const { localStrategy, jwtStrategy } = require('./auth/auth.strategy');
 
 let server;
 //Init express server
 const app = express();
+passport.use(localStrategy);
+passport.use(jwtStrategy);
 
 //Set middleware
 app.use(morgan('combined'));
 app.use(express.json());
 app.use(express.static('./public')); //Intercepts all HTTP requests that match files inside /public
+//Router setup
+app.use('/api/auth', authRouter);
+app.use('/api/user', userRouter);
+
+
+
 app.use('*', function (req, res) {
     res.status(HTTP_STATUS_CODES.NOT_FOUND).json({ error: 'Not found' });
 });
