@@ -1,0 +1,29 @@
+const chai = require('chai');
+const chaiHttp = require('chai-http');
+
+const { HTTP_STATUS_CODES } = require('../app/config');
+const { startServer, stopServer, app } = require('../app/server.js');
+
+const expect = chai.expect; // So we can do "expect" instead of always typing "chai.expect"
+chai.use(chaiHttp);
+
+describe('Integration tests for: /', function () {
+    // Mocha Hook: Runs before ALL the "it" test blocks.
+    before(function () {
+        return startServer(true);
+    });
+    // Mocha Hook: Runs after ALL the "it" test blocks.
+    after(function () {
+        return stopServer();
+    });
+
+    it('Should return index.html', function () {
+        chai.request(app)
+            .get('/')
+            .then(res => {
+                expect(res).to.have.status(HTTP_STATUS_CODES.OK);
+                expect(res).to.be.html;
+                expect(res.text).to.have.string('<!DOCTYPE html>');
+            });
+    });
+});
