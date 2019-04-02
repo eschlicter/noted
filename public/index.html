@@ -5,27 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+    <link rel="stylesheet" href="./noted.css">
+    <title>Home | Noted</title>
 
 </head>
 
 <body>
     <h1>Noted</h1>
     <nav>
-        <div id="default-menu">
-            <h3>Welcome to Noted</h3>
-            <h4>To create and view your notes, please <a href="/auth/login.html">Log In</a></h4>
+        <div id="default-menu" hidden>
+            <h3>Welcome to Noted!</h3>
+            <h4>Login to view and create notes <a href="/auth/login.html">Log In</a></h4>
         </div>
-        <div id="auth-menu">
+        <div id="auth-menu" hidden>
             <h3 id="nav-greeting">Welcome User</h3>
             <button id="logout-btn">Logout</button>
             <h4><a href="/note/create.html">Create New Note</a></h4>
         </div>
     </nav>
+
     <section id="note-list">
     </section>
 
-
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+        </script>
+    <script src="./utilities/cache.module.js"></script>
+    <script src="./utilities/render.module.js"></script>
+    <script src="./utilities/http.module.js"></script>
+    <script src="./index.page.js"></script>
 </body>
+
 
 </html>
