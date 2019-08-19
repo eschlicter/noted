@@ -3,8 +3,6 @@ let STATE = {};
 const RENDER = window.RENDER_MODULE;
 const HTTP = window.HTTP_MODULE;
 const CACHE = window.CACHE_MODULE;
-const connectionString =
-  "mongodb+srv://emilyschlicter:<logansquare>@cluster0-pbybp.mongodb.net/test?retryWrites=true&w=majority";
 
 $(document).ready(onPageLoad);
 
