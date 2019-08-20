@@ -51,7 +51,7 @@ function onDeleteNoteBtnClick(event) {
       jwtToken: STATE.authUser.jwtToken,
       onSuccess: () => {
         // Step 4: If succesful, reload the notes list
-        alert("Note deleted succesfully, reloading results ...");
+        alert("Note deleted succesfully, reloading results");
         HTTP.getUserNotes({
           jwtToken: STATE.authUser.jwtToken,
           onSuccess: RENDER.renderNotesList
