@@ -19,7 +19,8 @@ module.exports = {
     process.env.MONGO_URL ||
     "mongodb+srv://noted:noteduser@cluster0-pbybp.mongodb.net/noted?retryWrites=true&w=majority", //'mongodb://localhost:27017/noted', //needs updating
   TEST_MONGO_URL:
-    process.env.TEST_MONGO_URL || "mongodb://localhost:27017/test-noted", //needs updating
+    process.env.TEST_MONGO_URL ||
+    "mongodb+srv://noted:noteduser@cluster0-pbybp.mongodb.net/test?retryWrites=true&w=majority", //"mongodb://localhost:27017/test-noted", //needs updating
   JWT_SECRET: process.env.JWT_SECRET || "default",
   JWT_EXPIRY: process.env.JWT_EXPIRY || "7d"
 };
