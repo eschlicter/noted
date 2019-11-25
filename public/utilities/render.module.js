@@ -31,12 +31,16 @@ function renderNotesList(notes) {
 
 function renderNoteDetails(note) {
   $("#note-details").html(`
-        <br/>
-
-        <button class="btn btn-primary" id="edit-note-btn">Edit Note</button>
-		<h1>${note.title}</h1>
-		<i>${note.user.name} | ${new Date(note.updateDate).toLocaleString()}</i>
-		<p>${note.content}</p>
+  <div class="card text-center">
+  <div class="card-body">
+    <h5 class="card-title">${note.title}</h5>
+    <p class="card-text">${note.content}</p>
+    <button class="btn btn-primary" id="edit-note-btn">Edit Note</button>
+  </div>
+  <div class="card-footer text-muted">
+  <i>${note.user.name} | ${new Date(note.updateDate).toLocaleString()}</i>
+  </div>
+</div>  
 	`);
 }
 
