@@ -1,6 +1,6 @@
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 html {
   font-family: "Lato", sans-serif;
@@ -31,7 +31,7 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-form > label {
+/* form > label {
   display: block;
 }
 
@@ -40,7 +40,7 @@ textarea {
 }
 
 .form-field {
-  /* min-width: 80%; */
+
   border: 1px solid gray;
 }
 
@@ -84,4 +84,4 @@ textarea {
   body {
     max-width: 1000px;
   }
-}
+} */
