@@ -1,4 +1,6 @@
 h1 {
+  display: flex;
+  margin: auto;
   font-size: 72px;
   background: #ef32d9; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -13,4 +15,16 @@ h1 {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  height: 100%;
 }
