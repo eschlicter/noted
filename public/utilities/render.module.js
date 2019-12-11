@@ -19,7 +19,7 @@ function renderNotesList(notes) {
         }">
             <h3 class="card-header">${note.title}<br>
             <button id="edit-note-btn" class="btn btn-outline-warning">Edit</button>
-            <button id="-note-btn" class="btn btn-outline-danger">Delete</button></h3>
+            <button id="delete-note-btn" class="btn btn-outline-danger">Delete</button></h3>
             <p class="card-body card-content">${noteSummary}</p>
             <div class="card-footer text-muted card-info">
                 <i>${note.user.name} | Last updated on ${new Date(
