@@ -1,50 +1,38 @@
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 html {
   font-family: "Lato", sans-serif;
   font-size: 16px;
   padding: 0;
   margin: 0;
+  height: 100%;
 }
 
 body {
-  padding: 1rem;
-  margin: 0 auto;
+  height: 100%;
 }
 
-hr {
-  border: 0;
-  height: 1px;
-  background-color: black;
+h1,
+#nav-greeting {
+  font-size: 72px;
+  background: #ef32d9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #89fffd,
+    #ef32d9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #89fffd,
+    #ef32d9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-input,
-textarea {
-  font-family: "Lato", sans-serif;
-  font-size: 1em;
-}
-
-button,
-input[type="submit"] {
-  font-family: "Lato", sans-serif;
-  font-size: 1em;
-  font-weight: 100;
-  padding: 0.1em 0.3em;
-  background-color: white;
-  border: 1px solid black;
-  color: white;
-}
-
-button,
-input[type="submit"] {
-  background-color: white;
-  color: black;
-  border: 1px solid black;
-}
-
-form > label {
+/* form > label {
   display: block;
 }
 
@@ -53,7 +41,7 @@ textarea {
 }
 
 .form-field {
-  min-width: 80%;
+
   border: 1px solid gray;
 }
 
@@ -97,4 +85,4 @@ textarea {
   body {
     max-width: 1000px;
   }
-}
+} */
